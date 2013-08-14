@@ -1,0 +1,11 @@
+
+<input ng-model='query' placeholder='Search'>
+<br />
+<br />
+
+<div ng-repeat="team in teams | filter:query | orderBy:'TEAM_NAME'" class='panel tournament'>
+    <h5>{{team.TEAM_NAME}}</h5>
+    <div ng-repeat="tour in team.TOURNAMENTS | filter:query | orderBy: 'TOURNAMENT_DESCR'">
+            <a ng-href="#/tournaments/{{tour.TOURNAMENT_ID}}"><span>{{tour.TOURNAMENT_DESCR}}</span></a>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<input ng-model='query' placeholder='Search'>
+<br />
+<br />
+<div ng-repeat="player in players | filter:query | orderBy:'PLAYER_NAME'" class='panel'>
+    <a ng-href='#/players/{{player.PLAYER_ID}}'>
+        <span>{{player.PLAYER_NAME}}</span>
+    </a>
+     - 
+    <a ng-href='#/teams/{{player.TEAM_ID}}'>
+        <span>{{player.TEAM_NAME}}</span>
+    </a>
+</div>

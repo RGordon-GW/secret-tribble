@@ -1,0 +1,19 @@
+<h5>{{results.TOURNAMENT_NAME}}</h5>
+<div ng-repeat="round in results.ROUNDS">
+    <p class='title'>Round {{$index + 1}}</p>
+    <table>
+        <thead>
+            <tr>
+                <th width="50">Place</th>
+                <th width="210">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="team in round">
+                <td>{{team.CURRENT_PLACE}}</td>
+                <td>{{team.TEAM_NAME}}</td>  
+            </tr>
+        </tbody>
+        <table>
+    </section>
+</div>

@@ -1,0 +1,16 @@
+<input ng-model="query" placeholder='Search'>
+<br/><br/>
+
+
+<div ng-repeat="tournament in tournaments | filter:query">
+    <a ng-href='#/tournaments/{{tournament.TOURNAMENT_ID}}'>
+        <div class='panel'>
+            <span>{{tournament.EVENT_DESCRIPTION}}</span>
+            &nbsp;&nbsp;
+            <span>{{tournament.TOURNAMENT_DESCR}}</span>
+            &nbsp;&nbsp;
+            <span>{{tournament.START_DATE}}</span>
+        </div>
+    </a>
+</div>
+
